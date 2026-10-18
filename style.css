@@ -1,0 +1,150 @@
+body {
+    background-color: #e6f0fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a365d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(29, 53, 87, 0.12);
+    text-align: center;
+    max-width: 480px;
+    border: 2px solid #bde0fe;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 26px;
+    color: #03045e;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.stats-bar {
+    margin: 15px 0;
+    font-weight: 600;
+    font-size: 15px;
+    color: #0077b6;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.button-group {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #00b4d8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0077b6;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    border: 4px solid #03045e;
+    background-color: #caf0f8;
+}
+
+td {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #90e0ef;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 32px;
+    font-weight: bold;
+    color: #03045e;
+    cursor: pointer;
+    background-image: url('number_puzzle_game_image_no_borders.png');
+    background-size: 360px 360px;
+    user-select: none;
+}
+td.tile1 { background-position: 0px 0px; color: transparent; }
+td.tile2 { background-position: -90px 0px; color: transparent; }
+td.tile3 { background-position: -180px 0px; color: transparent; }
+td.tile4 { background-position: -270px 0px; color: transparent; }
+
+td.tile5 { background-position: 0px -90px; color: transparent; }
+td.tile6 { background-position: -90px -90px; color: transparent; }
+td.tile7 { background-position: -180px -90px; color: transparent; }
+td.tile8 { background-position: -270px -90px; color: transparent; }
+
+td.tile9 { background-position: 0px -180px; color: transparent; }
+td.tile10 { background-position: -90px -180px; color: transparent; }
+td.tile11 { background-position: -180px -180px; color: transparent; }
+td.tile12 { background-position: -270px -180px; color: transparent; }
+
+td.tile13 { background-position: 0px -270px; color: transparent; }
+td.tile14 { background-position: -90px -270px; color: transparent; }
+td.tile15 { background-position: -180px -270px; color: transparent; }
+
+td.tile16 { 
+    background: #ffffff; 
+    cursor: default; 
+    color: transparent;
+}
+
+.gallery-section {
+    margin-top: 30px;
+    border-top: 2px solid #bde0fe;
+    padding-top: 20px;
+}
+
+.gallery-section h2 {
+    font-size: 20px;
+    color: #03045e;
+    margin-bottom: 15px;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    background-color: #f0f8ff;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #90e0ef;
+    width: 120px;
+}
+
+.gallery-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.gallery-item p {
+    font-size: 11px;
+    color: #1a365d;
+    margin: 5px 0 0 0;
+}
