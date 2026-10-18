@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws in Turkey: Istanbul Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Paws in Turkey: Istanbul Edition 🐾</h1>
+        <p class="instructions">
+            To play, simply click on the "cell" blocks in the table to arrange the scrambled numbers in sequential order[cite: 1].  
+        </p>
+        <p class="sub-instructions">
+            Achieve the best play against your rivals with as much less moves as possible, in the shortest period of time[cite: 1]!
+        </p>
+
+        <div class="stats-bar">
+            <span id="moveCount">Number of Moves thus far: 0</span>
+            <span id="timeCount">Time spent in the current game: 0 seconds.</span>
+        </div>
+
+        <div class="button-group">
+            <button id="simpleGameBtn" onclick="startSimpleGame()">Don't let the kings down or else they might have have to get the purroal court involved </button>
+            <button id="newGameBtn" onclick="startNewGame()">New Game</button>
+        </div>
+
+        <table id="puzzleBoard">
+            <tr id="row1">
+                <td id="cell11" onclick="clickTile(1,1)"></td>
+                <td id="cell12" onclick="clickTile(1,2)"></td>
+                <td id="cell13" onclick="clickTile(1,3)"></td>
+                <td id="cell14" onclick="clickTile(1,4)"></td>
+            </tr>
+            <tr id="row2">
+                <td id="cell21" onclick="clickTile(2,1)"></td>
+                <td id="cell22" onclick="clickTile(2,2)"></td>
+                <td id="cell23" onclick="clickTile(2,3)"></td>
+                <td id="cell24" onclick="clickTile(2,4)"></td>
+            </tr>
+            <tr id="row3">
+                <td id="cell31" onclick="clickTile(3,1)"></td>
+                <td id="cell32" onclick="clickTile(3,2)"></td>
+                <td id="cell33" onclick="clickTile(3,3)"></td>
+                <td id="cell34" onclick="clickTile(3,4)"></td>
+            </tr>
+            <tr id="row4">
+                <td id="cell41" onclick="clickTile(4,1)"></td>
+                <td id="cell42" onclick="clickTile(4,2)"></td>
+                <td id="cell43" onclick="clickTile(4,3)"></td>
+                <td id="cell44" onclick="clickTile(4,4)"></td>
+            </tr>
+        </table>
+
+        <!-- Extra Photo Gallery with a hint.... -->
+        <div class="gallery-section">
+            <h2>Istanbul & Local Cats Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="suleiman1.jpg" alt="Cat named Çay">
+                    <p>Çay enjoying the view</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="suleiman2.jpg" alt="Cat named Baklava">
+                    <p>Baklava resting up</p>
+                </div>
+                <div class="gallery-item teaser-item">
+                    <div class="teaser-box">🐾</div>
+                    <p><strong>New challenge loading, come back later to see.</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
