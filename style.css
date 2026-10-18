@@ -89,7 +89,6 @@ td {
     user-select: none;
 }
 
-/* Background translations mapping tiles 1-15 matching assignment layout[cite: 1] */
 td.tile1 { background-position: 0px 0px; color: transparent; }
 td.tile2 { background-position: -90px 0px; color: transparent; }
 td.tile3 { background-position: -180px 0px; color: transparent; }
