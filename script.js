@@ -2,7 +2,7 @@ let numberOfMoves = 0;
 let time = 0;
 let timerInterval = null;
 
-// Initialize timer on load
+
 window.onload = function() {
     startTimer();
     startNewGame();
@@ -35,24 +35,25 @@ function clickTile(row, column) {
     let tile = cell.className;
 
     if (tile !== "tile16") {
-
+     
         if (column < 4 && document.getElementById("cell" + row + (column + 1)).className === "tile16") {
             swapTiles(cellId, "cell" + row + (column + 1));
             setTimeout(() => { win(); }, 1000);
             return;
-
+        }
+    
         if (column > 1 && document.getElementById("cell" + row + (column - 1)).className === "tile16") {
             swapTiles(cellId, "cell" + row + (column - 1));
             setTimeout(() => { win(); }, 1000);
             return;
         }
-
+     
         if (row < 4 && document.getElementById("cell" + (row + 1) + column).className === "tile16") {
             swapTiles(cellId, "cell" + (row + 1) + column);
             setTimeout(() => { win(); }, 1000);
             return;
         }
-
+  
         if (row > 1 && document.getElementById("cell" + (row - 1) + column).className === "tile16") {
             swapTiles(cellId, "cell" + (row - 1) + column);
             setTimeout(() => { win(); }, 1000);
@@ -66,17 +67,20 @@ function startNewGame() {
     document.getElementById("moveCount").innerText = "Number of Moves thus far: " + numberOfMoves;
     startTimer();
 
+
     let tiles = [];
     for (let i = 1; i <= 16; i++) {
         tiles.push("tile" + i);
     }
 
+ 
     for (let i = tiles.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         let temp = tiles[i];
         tiles[i] = tiles[j];
         tiles[j] = temp;
     }
+
 
     let index = 0;
     for (let r = 1; r <= 4; r++) {
@@ -92,13 +96,14 @@ function startSimpleGame() {
     document.getElementById("moveCount").innerText = "Number of Moves thus far: " + numberOfMoves;
     startTimer();
 
+  
     for (let r = 1; r <= 4; r++) {
         for (let c = 1; c <= 4; c++) {
             let tileNum = (r - 1) * 4 + c;
             document.getElementById("cell" + r + c).className = "tile" + tileNum;
         }
     }
-
+  
     document.getElementById("cell42").className = "tile16";
     document.getElementById("cell44").className = "tile14";
 }
@@ -124,9 +129,8 @@ function win() {
     ) {
         clearInterval(timerInterval);
         window.alert(
-            "CONGRATULATIONS!\n\nYou've successfully reordered the puzzle numbers in sequential order!\n\n" +
-            "Number of moves it took to complete: " + numberOfMoves + "\n" +
-            "Time spent to complete it: " + time + " second(s).\n\nTo play again, click OK"
+            "Congratulations!!\n Amount spent on current game in seconds: " + time +
+            "\n Number of moves so far: " + numberOfMoves + "\nWould you like to play again?"
         );
         window.location.reload();
     }
