@@ -35,25 +35,25 @@ function clickTile(row, column) {
     let tile = cell.className;
 
     if (tile !== "tile16") {
-     
+        // Check right
         if (column < 4 && document.getElementById("cell" + row + (column + 1)).className === "tile16") {
             swapTiles(cellId, "cell" + row + (column + 1));
             setTimeout(() => { win(); }, 1000);
             return;
         }
-    
+        // Check left
         if (column > 1 && document.getElementById("cell" + row + (column - 1)).className === "tile16") {
             swapTiles(cellId, "cell" + row + (column - 1));
             setTimeout(() => { win(); }, 1000);
             return;
         }
-     
+        // Check below
         if (row < 4 && document.getElementById("cell" + (row + 1) + column).className === "tile16") {
             swapTiles(cellId, "cell" + (row + 1) + column);
             setTimeout(() => { win(); }, 1000);
             return;
         }
-  
+        // Check above
         if (row > 1 && document.getElementById("cell" + (row - 1) + column).className === "tile16") {
             swapTiles(cellId, "cell" + (row - 1) + column);
             setTimeout(() => { win(); }, 1000);
@@ -73,7 +73,7 @@ function startNewGame() {
         tiles.push("tile" + i);
     }
 
- 
+
     for (let i = tiles.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         let temp = tiles[i];
@@ -96,14 +96,14 @@ function startSimpleGame() {
     document.getElementById("moveCount").innerText = "Number of Moves thus far: " + numberOfMoves;
     startTimer();
 
-  
+
     for (let r = 1; r <= 4; r++) {
         for (let c = 1; c <= 4; c++) {
             let tileNum = (r - 1) * 4 + c;
             document.getElementById("cell" + r + c).className = "tile" + tileNum;
         }
     }
-  
+
     document.getElementById("cell42").className = "tile16";
     document.getElementById("cell44").className = "tile14";
 }
